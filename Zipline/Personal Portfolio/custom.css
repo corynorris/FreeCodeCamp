@@ -1,0 +1,208 @@
+﻿#home {
+    background: url("http://lorempixel.com/1280/740/technics/") no-repeat center center fixed;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#home h1, #home p {
+	text-align: center;
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    	font-size: 44px;
+
+}
+#home p {
+	font-size: 24px;
+}
+
+
+body {
+    postion: relative;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 0px;
+    min-height: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    width: 250px;
+    border: 0px;
+    border-top: 3px solid red;
+}
+
+hr.light {
+    border-top: 1px solid #fff;
+}
+
+hr.bottom {
+    width: 500px;
+    border: 0px;
+    border-top: 1px solid rgba(50, 50, 50, 0.6);
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #222222;
+    border-color: rgba(255, 0, 0, 1);
+}
+
+/* title */
+.navbar-default .navbar-brand {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #FF3333;
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    font-weight: 800;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FF3333;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #FF3333;
+    background-color: #E7E7E7;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #FF3333;
+    background-color: #D5D5D5;
+}
+
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
+
+#portfolio {}
+
+.portfolio-item {
+    /* <a> is inline by default. Set it to block so that it's contained block elements work properly */
+    display: block;
+    /* allow children to use absolute */
+    position: relative;
+    /* space it out from other portfolio items */
+    margin: 15px 0px;
+}
+
+.portfolio-hover {
+    /* make the block transparant */
+    opacity: 0;
+    /* fill a block the size of our relative parent */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* make the background faded teal */
+    background: rgba(255, 0, 0, 0.9);
+    /* turn on effects so we have a nicer transition */
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+.portfolio-hover-content {
+    /* enable top and other absolute positioning items */
+    position: absolute;
+    /* horizontal center*/
+    top: 50%;
+    height: 20px;
+    margin-top: -30px;
+    /* vertical center */
+    width: 100%;
+    text-align: center;
+    /* make the icon larger and white */
+    font-size: 20px;
+    color: #fff;
+}
+
+.portfolio-hover:hover {
+    /* Show our hover effect */
+    opacity: 1;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    box-shadow: 0 4px 0 0 #AA0000;
+    background: red;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary {
+    background: #FF3333;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #FF3333;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    background-color: #FF3333;
+}
