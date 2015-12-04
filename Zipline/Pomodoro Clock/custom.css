@@ -1,0 +1,77 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #409999;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+.control {
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 1em;
+    padding: 0;
+}
+
+.control-title {
+    font-size: 13px;
+}
+
+#break-length-value {}
+
+.control-updown {
+    font-size: 24px;
+}
+
+.control-updown div {
+    display: inline;
+}
+
+button {
+    background-color: #409999;
+    border-width: 0;
+}
+
+/* 2 ways to center things within a circle:
+1) line-height: height/lines
+2) display: table-cell;
+   vertical-align: middle;
+*/
+
+.circle {
+    border: 3px solid pink;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    line-height: 100px;
+    margin: 0 auto;
+    /* centering */
+    cursor: pointer;
+}
+
+.session {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+#label {
+    text-transform: capitalize;
+}

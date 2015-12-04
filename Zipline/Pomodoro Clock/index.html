@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="custom.css">
+  </head>
+  <body>
+    <header>
+      <h1> Pomodoro Timer </h1>
+      <p> Set a break and session length. If you'd like to start with a break, set the break last. Reset by pausing and changing the time.</p>
+    </header>
+    <section class="controls">
+      <div id="break" class="control">
+        <div class="control-title">break length</div>
+        <div class="control-updown">
+          <button class="minus-break-length">-</button>
+          <div id="break-length-value"> 5 </div>
+          <button class="plus-break-length">+</button>
+        </div>
+      </div>      
+      <div id="session" class="control">
+        <div class="control-title">session length</div>
+        <div class="control-updown">
+          <button class="minus-session-length">-</button>
+          <div id="session-length-value"> 25 </div>
+          <button class="plus-session-length">+</button>
+        </div>
+      </div>
+    </section>
+    <section id="timer" class="timer">
+      <div class="circle">
+        <div id="label" class="session">Session</div>
+        <div id="time" class="session">25</div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="timer.js"></script>
+  </body>
+</html>
