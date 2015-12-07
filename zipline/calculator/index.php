@@ -8,15 +8,16 @@
 	<body>
 		<div class="container-fluid">
 			<div class="calculator">
+				<div class="row"><h1 class="text-center">Roman Calculator</h1></div>
 				<div class="row">
-					<div class="col-sm-3">
-						<input type="text" id="answer" class="form-control" disabled>
+					<div class="col-sm-12">
+						<input type="text" id="result" class="form-control" disabled>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<button class="btn btn-default">AC</button>
-						<button class="btn btn-default">CE</button>
+						<button class="btn btn-primary raised medium">AC</button>
+						<button class="btn btn-primary raised medium">CE</button>
 					</div>
 				</div>
 				<!-- 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 -->
@@ -24,31 +25,31 @@
 				
 				<div class="row">
 					<div class="col-sm-12">
-						<button class="btn btn-default">C</button>
-						<button class="btn btn-default">D</button>
-						<button class="btn btn-default">M</button>
-						<button class="btn btn-default">+</button>
+						<button class="btn btn-primary raised">C</button>
+						<button class="btn btn-primary raised">D</button>
+						<button class="btn btn-primary raised">M</button>
+						<button class="btn btn-primary raised">+</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<button class="btn btn-default">V</button>
-						<button class="btn btn-default">X</button>
-						<button class="btn btn-default">L</button>
-						<button class="btn btn-default">-</button>
+						<button class="btn btn-primary raised">V</button>
+						<button class="btn btn-primary raised">X</button>
+						<button class="btn btn-primary raised">L</button>
+						<button class="btn btn-primary raised">-</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<button class="btn btn-default">I</button>
-						<button class="btn btn-default">II</button>
-						<button class="btn btn-default">III</button>
-						<button class="btn btn-default">x</button>
+						<button class="btn btn-primary raised">I</button>
+						<button class="btn btn-primary raised">II</button>
+						<button class="btn btn-primary raised">III</button>
+						<button class="btn btn-primary raised">*</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<button class="btn btn-default large">=</button>
+						<button class="btn btn-primary raised large">=</button>
 					</div>
 				</div>
 			</div>

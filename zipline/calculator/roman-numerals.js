@@ -18,7 +18,7 @@ function stringStartsWith (string, prefix) {
  * @param  {Integer} num The number to convert
  * @return {String}      The Roman Numeral
  */
-function convertNumberToRoman(num) {
+function convertNumberToRomanString(num) {
 
   var ans = "";
 
@@ -47,7 +47,7 @@ function convertNumberToRoman(num) {
  * @param  {String}  str The Roman Numeral to convert
  * @return {Integer}     The integer representing the Roman Numeral
  */
-function convertStringToNumber(str) {
+function convertRomanStringToNumber(str) {
     var ans = 0;
 
   //find the closest roman numeral

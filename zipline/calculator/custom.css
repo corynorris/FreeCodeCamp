@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    padding: 0px;
+    margin: 0px;	
+}
+
+
+
+div.calculator {
+	padding: 35px 40px;
+	width: 320px !important;
+	margin: 50px auto;
+	border-radius: 20px;
+	background: #DDDDDD;
+	border: 2px solid #BBB;
+
+}
+
+
+
+.btn {
+	width: 50px;
+    padding: 15px;
+    margin: 3px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+}
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+.btn.medium {
+	width: 110px;
+}
+
+.btn.large {
+	width: 230px;
+}
+
+#result {
+	background: #FEFEFE;
+	border: 2px solid #BBB;
+	margin: 10px 0;
+	padding: 20px;
+	font-weight: 800;
+	font-size: 16px;
+	text-align: right;
+}
