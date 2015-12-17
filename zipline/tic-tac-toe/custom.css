@@ -1,0 +1,81 @@
+body {
+  background: #475577;
+  color: #FAC51C;
+}
+
+#container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+hr {
+  width: 500px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  border: 0px;
+  height: 1px;
+  border-top: 4px solid #FAC51C;
+}
+
+canvas {
+  position: relative;
+  margin: 30px;
+  display: inline;
+}
+
+div.button {
+  color: #475577;
+  background: #FAC51C;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 10px 15px;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+div.button:active {
+  color: #212737;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+}
+
+div.log {
+  padding: 15px;
+  font-size: 30px;
+}
+
+#user-marker-field {
+  font-size: 40px;
+}
+
+#user-marker {
+  width: 1em;
+  padding: 10px;
+  margin: 15px;
+  font-size: 50px;
+  text-align: center;
+  border: 5px solid #b6bfd4;
+}
+
+#user-marker:read-only {
+  background-color: #EBEBE4;
+  border: 5px solid #ABADB3;
+  cursor: not-allowed;
+}
+
+.log {
+  margin: 0 auto;
+  width: 350px;
+}
+
+.log-item {
+  display: inline-block;
+  padding: 15px 10px 5px 10px;
+  clear: both;
+  border-bottom: 1px solid #FAC51C;
+}
