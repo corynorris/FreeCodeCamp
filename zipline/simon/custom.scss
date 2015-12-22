@@ -1,0 +1,485 @@
+@import url(https://fonts.googleapis.com/css?family=Candal);
+
+$pad-size: 175px;
+$pad-spacing: 5px;
+$center-size: 155px;
+$metal: #2c3e50;
+$label: #ecf0f1;
+$red: #c0392b;
+$yellow: rgb(195, 195, 15);
+$green: #27ae60;
+$blue: #2980b9;
+$width: $pad-size*2 + $pad-spacing*4;
+$height: $pad-size*2 + $pad-spacing*4;
+
+body {
+  text-align: center;
+}
+
+div:focus {
+  outline: 0;
+}
+
+h1 {
+  font-size: 70px;
+  color: $metal;
+}
+
+div.simon {
+
+  margin: 50px auto;
+  position: relative;
+  width: $width;
+  height: $height;
+  background: $metal;
+  font-size: 0;
+  border-radius: 100%;
+  padding: 10px;
+
+  > .pad {
+    padding: 0;
+    margin: $pad-spacing;
+    display: inline-block;
+    border-radius: 0;
+    width: $pad-size;
+    height: $pad-size;
+    z-index: -2;
+  }
+  > .red {
+    background: $red;
+    border-top-right-radius: 100%;
+  }
+
+  > .blue {
+    background: $blue;
+    border-bottom-right-radius: 100%;
+  }
+
+  > .yellow {
+    background: $yellow;
+    border-bottom-left-radius: 100%;
+  }
+
+  > .green {
+    background: $green;
+    border-top-left-radius: 100%;
+  }
+
+  .center {
+    background: $metal;
+    text-align: center;
+    color: white;
+    width: $center-size;
+    height: $center-size;
+    position: relative;
+    z-index: 10;
+    display: block;
+    padding: $pad-spacing*2;
+    left: $width/2 - $center-size/2 - $pad-spacing*2;
+    top: -$height/2 - $center-size/2 - $pad-spacing*2;
+    border-radius: 50%;
+
+    .center-inner {
+      width: $center-size;
+      height: $center-size;
+      background: $label;
+      border-radius: 50%;
+
+      > .brand {
+        font-family: 'Candal', sans-serif;
+        padding-top: 26px;
+        color: $metal;
+        font-size: 36px;
+        font-weight: 900;
+        display: block;
+      }
+
+      #controls {
+        .label {
+          font-size: 12px;
+          color: black;
+        }
+        > div {
+          display: inline-block;
+          padding: 0px;
+        }
+
+        > #steps {
+          // Shown below, to keep code clean
+        }
+
+        > #start {
+          padding: 5px;
+
+          .value {
+            margin: 0 auto;
+            margin-bottom: 15px;
+
+            position: relative;
+            color: #FFF;
+            display: block;
+            border-radius: 100%;
+            border: solid 1px #D94E3B;
+            background: #cb3b27;
+            width: 16px;
+            height: 16px;
+            box-shadow: 0px 5px 0px #84261a;
+
+            &:active {
+              box-shadow: 0px 2px 0px #84261a;
+              position: relative;
+              top: 5px;
+            }
+          }
+        }
+        > #strict {
+          padding: 5px;
+          .value {
+
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+// Switch
+// from: http://tympanus.net/codrops/2012/09/13/button-switches-with-checkboxes-and-css3-fanciness/
+.switch {
+  position: relative;
+  width: 14px;
+  height: 30px;
+  margin: 0 auto 5px;
+  background: black;
+  opacity: 0.5;
+
+  input {
+    display: block;
+    margin: 0 auto 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ label { /* Button */
+      background: #cbc7bc;
+      box-shadow: inset 0 1px 0 white,
+      0 0 0 1px #999,
+      0 0 5px 1px rgba(0, 0, 0, 0.2),
+      0 2px 0 rgba(255, 255, 255, 0.6),
+      inset 0 10px 1px #e5e5e5,
+      inset 0 11px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -45px 3px #ccc;
+    }
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    background: #d2cbc3;
+    box-shadow: inset 0 1px 0 white,
+    0 0 0 1px #999,
+    0 0 5px 1px rgba(0, 0, 0, 0.2),
+    inset 0 -10px 0 #aaa,
+    0 2px 0 rgba(255, 255, 255, 0.1),
+    inset 0 45px 3px #e0e0E0,
+    0 8px 6px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/**
+  CSS Digits for our counter.
+  from: http://tutorialzine.com/2013/06/digital-clock/
+  **/
+
+$digit-width: 20px;
+$digit-height: 36px;
+$digit-border-width: 4px;
+$digit-section-margin: 2px;
+
+#display {
+  background: #000000;
+  padding: 2px;
+
+  .digits {
+    font-size: 0px;
+
+    div {
+      text-align: left;
+      position: relative;
+      width: $digit-width;
+      height: $digit-height;
+      display: inline-block;
+      margin: 2px;
+
+      span {
+        opacity: 0.3;
+        position: absolute;
+        background: red;
+        border-color: red;
+
+        // used for the triangle bits that make it look digital
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 5px solid transparent;
+        }
+
+      }
+    }
+
+  }
+}
+
+// digit pieces
+
+// *******************
+// * **    TOP    ** *
+// *   **       **   *
+// *    **     **    *
+// *      ** **      *
+// * Left   *  Right *
+// *      ** **      *
+// *    **     **    *
+// *   **       **   *
+// * **  Bottom   ** *
+// *******************
+
+#display .digits .d1 {
+  height: $digit-border-width;
+  width: $digit-width - $digit-border-width*2 - 2*$digit-section-margin;
+  top: 0;
+  left: $digit-border-width + $digit-section-margin;
+  &::before {
+    border-width: 0 $digit-border-width $digit-border-width 0;
+    border-right-color: inherit;
+    left: -$digit-border-width;
+
+  }
+  &::after {
+    border-width: 0 0 $digit-border-width $digit-border-width;
+    border-left-color: inherit;
+    right: -$digit-border-width;
+  }
+}
+
+#display .digits .d2 {
+  height: $digit-border-width;
+  width: $digit-width - $digit-border-width*2 - 2*$digit-section-margin;
+  top: $digit-height/2 - $digit-border-width/2;
+  left: $digit-border-width + $digit-section-margin;
+  &::before {
+    border-width: $digit-border-width/2 $digit-border-width/2 $digit-border-width/2 0;
+    border-right-color: inherit;
+    left: -$digit-border-width/2;
+  }
+  &::after {
+    border-width: $digit-border-width/2 0 $digit-border-width/2 $digit-border-width/2;
+    border-left-color: inherit;
+    right: -$digit-border-width/2;
+  }
+}
+
+#display .digits .d3 {
+  height: $digit-border-width;
+  width: $digit-width - $digit-border-width*2 - 2*$digit-section-margin;
+  bottom: 0;
+  left: $digit-border-width + $digit-section-margin;
+  &::before {
+    border-width: $digit-border-width $digit-border-width 0 0;
+    border-right-color: inherit;
+    left: -$digit-border-width;
+
+  }
+  &::after {
+    border-width: $digit-border-width 0 0 $digit-border-width;
+    border-left-color: inherit;
+    right: -$digit-border-width;
+  }
+}
+
+#display .digits .d4 {
+  height: ($digit-height - 3*$digit-border-width) / 2;
+  width: $digit-border-width;
+  top: $digit-border-width;
+  left: 0;
+  &::before {
+    border-width: 0 $digit-border-width $digit-border-width 0;
+    border-bottom-color: inherit;
+    top: -$digit-border-width;
+
+  }
+  &::after {
+    border-width: $digit-border-width/2 $digit-border-width 0 0;
+    border-top-color: inherit;
+    bottom: -$digit-border-width/2;
+  }
+}
+
+#display .digits .d5 {
+  height: ($digit-height - 3*$digit-border-width) / 2;
+  width: $digit-border-width;
+  top: $digit-border-width;
+  right: 0;
+  &::before {
+    border-width: 0 0 $digit-border-width $digit-border-width;
+    border-bottom-color: inherit;
+    top: -$digit-border-width;
+
+  }
+  &::after {
+    border-width: $digit-border-width/2 0 0 $digit-border-width;
+    border-top-color: inherit;
+    bottom: -$digit-border-width/2;
+  }
+}
+
+#display .digits .d6 {
+  height: ($digit-height - 3 * $digit-border-width) / 2;
+  width: $digit-border-width;
+  bottom: $digit-border-width;
+  left: 0;
+  &::before {
+    border-width: 0 $digit-border-width $digit-border-width / 2 0;
+    border-bottom-color: inherit;
+    top: -$digit-border-width/2;
+
+  }
+  &::after {
+    border-width: $digit-border-width $digit-border-width 0 0;
+    border-top-color: inherit;
+    bottom: -$digit-border-width;
+  }
+}
+
+#display .digits .d7 {
+  height: ($digit-height - 3*$digit-border-width) / 2;
+  width: $digit-border-width;
+  bottom: $digit-border-width;
+  right: 0;
+  &::before {
+    border-width: 0 0 $digit-border-width/2 $digit-border-width;
+    border-bottom-color: inherit;
+    top: -$digit-border-width/2;
+
+  }
+  &::after {
+    border-width: $digit-border-width 0 0 $digit-border-width;
+    border-top-color: inherit;
+    bottom: -$digit-border-width;
+  }
+}
+
+// Which sections to turn on
+// zero
+#display .digits div.zero .d1,
+#display .digits div.zero .d3,
+#display .digits div.zero .d4,
+#display .digits div.zero .d5,
+#display .digits div.zero .d6,
+#display .digits div.zero .d7 {
+  opacity: 1;
+}
+
+// one
+#display .digits div.one .d5,
+#display .digits div.one .d7 {
+  opacity: 1;
+}
+
+// two
+#display .digits div.two .d1,
+#display .digits div.two .d2,
+#display .digits div.two .d3,
+#display .digits div.two .d5,
+#display .digits div.two .d6 {
+  opacity: 1;
+}
+
+// three
+#display .digits div.three .d1,
+#display .digits div.three .d2,
+#display .digits div.three .d3,
+#display .digits div.three .d5,
+#display .digits div.three .d7 {
+  opacity: 1;
+}
+
+// four
+#display .digits div.four .d2,
+#display .digits div.four .d4,
+#display .digits div.four .d5,
+#display .digits div.four .d7 {
+  opacity: 1;
+}
+
+// five
+#display .digits div.five .d1,
+#display .digits div.five .d2,
+#display .digits div.five .d3,
+#display .digits div.five .d4,
+#display .digits div.five .d7 {
+  opacity: 1;
+}
+
+// six
+#display .digits div.six .d1,
+#display .digits div.six .d2,
+#display .digits div.six .d3,
+#display .digits div.six .d4,
+#display .digits div.six .d6,
+#display .digits div.six .d7 {
+  opacity: 1;
+}
+
+// seven
+#display .digits div.seven .d1,
+#display .digits div.seven .d5,
+#display .digits div.seven .d7 {
+  opacity: 1;
+}
+
+// eight
+#display .digits div.eight .d1,
+#display .digits div.eight .d2,
+#display .digits div.eight .d3,
+#display .digits div.eight .d4,
+#display .digits div.eight .d5,
+#display .digits div.eight .d6,
+#display .digits div.eight .d7 {
+  opacity: 1;
+}
+
+// nine
+#display .digits div.nine .d1,
+#display .digits div.nine .d2,
+#display .digits div.nine .d4,
+#display .digits div.nine .d5,
+#display .digits div.nine .d7 {
+  opacity: 1;
+}
+
+// left W
+#display .digits div.win-left .d3,
+#display .digits div.win-left .d4,
+#display .digits div.win-left .d6,
+#display .digits div.win-left .d7 {
+  opacity: 1;
+}
+
+// right W
+#display .digits div.win-right .d3,
+#display .digits div.win-right .d5,
+#display .digits div.win-right .d6,
+#display .digits div.win-right .d7 {
+  opacity: 1;
+}

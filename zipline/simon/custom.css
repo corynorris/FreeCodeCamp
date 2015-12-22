@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Candal);
+body {
+  text-align: center; }
+
+div:focus {
+  outline: 0; }
+
+h1 {
+  font-size: 70px;
+  color: #2c3e50; }
+
+div.simon {
+  margin: 50px auto;
+  position: relative;
+  width: 370px;
+  height: 370px;
+  background: #2c3e50;
+  font-size: 0;
+  border-radius: 100%;
+  padding: 10px; }
+  div.simon > .pad {
+    padding: 0;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 0;
+    width: 175px;
+    height: 175px;
+    z-index: -2; }
+  div.simon > .red {
+    background: #c0392b;
+    border-top-right-radius: 100%; }
+  div.simon > .blue {
+    background: #2980b9;
+    border-bottom-right-radius: 100%; }
+  div.simon > .yellow {
+    background: #c3c30f;
+    border-bottom-left-radius: 100%; }
+  div.simon > .green {
+    background: #27ae60;
+    border-top-left-radius: 100%; }
+  div.simon .center {
+    background: #2c3e50;
+    text-align: center;
+    color: white;
+    width: 155px;
+    height: 155px;
+    position: relative;
+    z-index: 10;
+    display: block;
+    padding: 10px;
+    left: 97.5px;
+    top: -272.5px;
+    border-radius: 50%; }
+    div.simon .center .center-inner {
+      width: 155px;
+      height: 155px;
+      background: #ecf0f1;
+      border-radius: 50%; }
+      div.simon .center .center-inner > .brand {
+        font-family: 'Candal', sans-serif;
+        padding-top: 26px;
+        color: #2c3e50;
+        font-size: 36px;
+        font-weight: 900;
+        display: block; }
+      div.simon .center .center-inner #controls .label {
+        font-size: 12px;
+        color: black; }
+      div.simon .center .center-inner #controls > div {
+        display: inline-block;
+        padding: 0px; }
+      div.simon .center .center-inner #controls > #start {
+        padding: 5px; }
+        div.simon .center .center-inner #controls > #start .value {
+          margin: 0 auto;
+          margin-bottom: 15px;
+          position: relative;
+          color: #FFF;
+          display: block;
+          border-radius: 100%;
+          border: solid 1px #D94E3B;
+          background: #cb3b27;
+          width: 16px;
+          height: 16px;
+          box-shadow: 0px 5px 0px #84261a; }
+          div.simon .center .center-inner #controls > #start .value:active {
+            box-shadow: 0px 2px 0px #84261a;
+            position: relative;
+            top: 5px; }
+      div.simon .center .center-inner #controls > #strict {
+        padding: 5px; }
+
+.switch {
+  position: relative;
+  width: 14px;
+  height: 30px;
+  margin: 0 auto 5px;
+  background: black;
+  opacity: 0.5; }
+  .switch input {
+    display: block;
+    margin: 0 auto 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer; }
+    .switch input:checked ~ label {
+      /* Button */
+      background: #cbc7bc;
+      box-shadow: inset 0 1px 0 white, 0 0 0 1px #999, 0 0 5px 1px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.6), inset 0 10px 1px #e5e5e5, inset 0 11px 0 rgba(255, 255, 255, 0.5), inset 0 -45px 3px #ccc; }
+  .switch label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    background: #d2cbc3;
+    box-shadow: inset 0 1px 0 white, 0 0 0 1px #999, 0 0 5px 1px rgba(0, 0, 0, 0.2), inset 0 -10px 0 #aaa, 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 45px 3px #e0e0E0, 0 8px 6px rgba(0, 0, 0, 0.18); }
+
+/**
+  CSS Digits for our counter.
+  from: http://tutorialzine.com/2013/06/digital-clock/
+  **/
+#display {
+  background: #000000;
+  padding: 2px; }
+  #display .digits {
+    font-size: 0px; }
+    #display .digits div {
+      text-align: left;
+      position: relative;
+      width: 20px;
+      height: 36px;
+      display: inline-block;
+      margin: 2px; }
+      #display .digits div span {
+        opacity: 0.3;
+        position: absolute;
+        background: red;
+        border-color: red; }
+        #display .digits div span::before, #display .digits div span::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 5px solid transparent; }
+
+#display .digits .d1 {
+  height: 4px;
+  width: 8px;
+  top: 0;
+  left: 6px; }
+  #display .digits .d1::before {
+    border-width: 0 4px 4px 0;
+    border-right-color: inherit;
+    left: -4px; }
+  #display .digits .d1::after {
+    border-width: 0 0 4px 4px;
+    border-left-color: inherit;
+    right: -4px; }
+
+#display .digits .d2 {
+  height: 4px;
+  width: 8px;
+  top: 16px;
+  left: 6px; }
+  #display .digits .d2::before {
+    border-width: 2px 2px 2px 0;
+    border-right-color: inherit;
+    left: -2px; }
+  #display .digits .d2::after {
+    border-width: 2px 0 2px 2px;
+    border-left-color: inherit;
+    right: -2px; }
+
+#display .digits .d3 {
+  height: 4px;
+  width: 8px;
+  bottom: 0;
+  left: 6px; }
+  #display .digits .d3::before {
+    border-width: 4px 4px 0 0;
+    border-right-color: inherit;
+    left: -4px; }
+  #display .digits .d3::after {
+    border-width: 4px 0 0 4px;
+    border-left-color: inherit;
+    right: -4px; }
+
+#display .digits .d4 {
+  height: 12px;
+  width: 4px;
+  top: 4px;
+  left: 0; }
+  #display .digits .d4::before {
+    border-width: 0 4px 4px 0;
+    border-bottom-color: inherit;
+    top: -4px; }
+  #display .digits .d4::after {
+    border-width: 2px 4px 0 0;
+    border-top-color: inherit;
+    bottom: -2px; }
+
+#display .digits .d5 {
+  height: 12px;
+  width: 4px;
+  top: 4px;
+  right: 0; }
+  #display .digits .d5::before {
+    border-width: 0 0 4px 4px;
+    border-bottom-color: inherit;
+    top: -4px; }
+  #display .digits .d5::after {
+    border-width: 2px 0 0 4px;
+    border-top-color: inherit;
+    bottom: -2px; }
+
+#display .digits .d6 {
+  height: 12px;
+  width: 4px;
+  bottom: 4px;
+  left: 0; }
+  #display .digits .d6::before {
+    border-width: 0 4px 2px 0;
+    border-bottom-color: inherit;
+    top: -2px; }
+  #display .digits .d6::after {
+    border-width: 4px 4px 0 0;
+    border-top-color: inherit;
+    bottom: -4px; }
+
+#display .digits .d7 {
+  height: 12px;
+  width: 4px;
+  bottom: 4px;
+  right: 0; }
+  #display .digits .d7::before {
+    border-width: 0 0 2px 4px;
+    border-bottom-color: inherit;
+    top: -2px; }
+  #display .digits .d7::after {
+    border-width: 4px 0 0 4px;
+    border-top-color: inherit;
+    bottom: -4px; }
+
+#display .digits div.zero .d1,
+#display .digits div.zero .d3,
+#display .digits div.zero .d4,
+#display .digits div.zero .d5,
+#display .digits div.zero .d6,
+#display .digits div.zero .d7 {
+  opacity: 1; }
+
+#display .digits div.one .d5,
+#display .digits div.one .d7 {
+  opacity: 1; }
+
+#display .digits div.two .d1,
+#display .digits div.two .d2,
+#display .digits div.two .d3,
+#display .digits div.two .d5,
+#display .digits div.two .d6 {
+  opacity: 1; }
+
+#display .digits div.three .d1,
+#display .digits div.three .d2,
+#display .digits div.three .d3,
+#display .digits div.three .d5,
+#display .digits div.three .d7 {
+  opacity: 1; }
+
+#display .digits div.four .d2,
+#display .digits div.four .d4,
+#display .digits div.four .d5,
+#display .digits div.four .d7 {
+  opacity: 1; }
+
+#display .digits div.five .d1,
+#display .digits div.five .d2,
+#display .digits div.five .d3,
+#display .digits div.five .d4,
+#display .digits div.five .d7 {
+  opacity: 1; }
+
+#display .digits div.six .d1,
+#display .digits div.six .d2,
+#display .digits div.six .d3,
+#display .digits div.six .d4,
+#display .digits div.six .d6,
+#display .digits div.six .d7 {
+  opacity: 1; }
+
+#display .digits div.seven .d1,
+#display .digits div.seven .d5,
+#display .digits div.seven .d7 {
+  opacity: 1; }
+
+#display .digits div.eight .d1,
+#display .digits div.eight .d2,
+#display .digits div.eight .d3,
+#display .digits div.eight .d4,
+#display .digits div.eight .d5,
+#display .digits div.eight .d6,
+#display .digits div.eight .d7 {
+  opacity: 1; }
+
+#display .digits div.nine .d1,
+#display .digits div.nine .d2,
+#display .digits div.nine .d4,
+#display .digits div.nine .d5,
+#display .digits div.nine .d7 {
+  opacity: 1; }
+
+#display .digits div.win-left .d3,
+#display .digits div.win-left .d4,
+#display .digits div.win-left .d6,
+#display .digits div.win-left .d7 {
+  opacity: 1; }
+
+#display .digits div.win-right .d3,
+#display .digits div.win-right .d5,
+#display .digits div.win-right .d6,
+#display .digits div.win-right .d7 {
+  opacity: 1; }
+
+/*# sourceMappingURL=custom.css.map */
