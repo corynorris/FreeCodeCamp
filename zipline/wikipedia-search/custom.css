@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Nova+Flat);
+*:focus {
+  outline: 0; }
+
+body {
+  padding-top: 2em;
+  background: #16a085;
+  font-family: 'Playfair Display', serif; }
+
+div#search {
+  font-size: 0px; }
+
+/* http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text */
+/* TODO: Add search icon */
+#search input {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px;
+  border: 2px solid #e67e22;
+  width: 100%;
+  transition: 0.4s;
+  background: #f1c40f;
+  box-shadow: 5px 5px 0px #e67e22;
+  margin-top: -5px;
+  margin-bottom: 20px; }
+  #search input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: 'x';
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #e67e22; }
+  #search input::-webkit-input-placeholder {
+    color: black; }
+#search h2 {
+  font-family: 'Nova Flat', cursive;
+  font-weight: bold;
+  /*  color: $primary-color;
+   font-weight: bold;
+   text-shadow: 2px 2px black; */ }
+
+.result {
+  background: #f1c40f;
+  margin: 8px 1px;
+  padding: 15px;
+  border-radius: 5px; }
+  .result .result-title, .result a {
+    font-size: 18px;
+    font-weight: bold;
+    background: #e67e22;
+    color: black;
+    padding: 5px 8px;
+    letter-spacing: 1.2px; }
+  .result .result-content, .result a {
+    color: black;
+    text-indent: 15px;
+    padding: 10px 5px;
+    overflow: hidden; }
+  .result:hover {
+    box-shadow: 0 0 5px 3px #e67e22; }
+  .result hr {
+    display: block;
+    border: 0;
+    border-top: 2px solid #e67e22;
+    margin: 0.5em 0;
+    padding: 0; }
+
+.searchmatch {
+  font-weight: 700; }
+
+/*# sourceMappingURL=custom.css.map */
