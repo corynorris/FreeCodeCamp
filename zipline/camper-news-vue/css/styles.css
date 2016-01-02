@@ -1,0 +1,13 @@
+.headline {
+    display: block;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.badge {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    cursor: pointer;
+}
