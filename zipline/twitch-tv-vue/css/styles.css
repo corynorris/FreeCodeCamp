@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+	font-family: 'Lato', sans-serif;
+    background: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/gplaypattern.png');
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.header {
+    background: #336E7B;
+    padding: 1em;
+    color: #fff;
+    border-bottom: 5px solid #7b334a;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.header .form-inline {
+    margin-top: 6px;
+    margin-right: 20px;
+}
+
+.header input {
+    color: black;
+    padding: 2px;
+}
+
+.container .row {
+    margin: 1em 0;
+    padding: 0.8em;
+    background: #336E7B;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 5px 5px #7b334a;
+  border-top-left-radius: 10px;
+}
+
+a {
+    color: #fff;
+}
