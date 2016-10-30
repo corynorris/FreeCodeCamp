@@ -1,6 +1,6 @@
 # Free Code Camp Projects
 ## Overview
-My solutions for the free code camp's ~800 hour course.
+My solutions to the HTML, CSS and JS components of free code camp's ~800 hour course.
 
 ## Contents
 The repository is divided into 2 folders:  
